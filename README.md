@@ -9,6 +9,7 @@ Ideas for what we want the program to do...
 - information abou the host device
 - information about the devices on the network
 - port analysis on host machine
+- show connection bottleneck (traceroute)
 
 Installed linux tools (through apt)
 - nmap
