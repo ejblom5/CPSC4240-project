@@ -6,3 +6,7 @@ Ideas for what we want the program to do...
 - Most visited ip/web sites
 - information abou the host device
 - information about the devices on the network
+
+Installed linux tools (through apt)
+- nmap
+- net-tools
