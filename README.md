@@ -12,3 +12,4 @@ Ideas for what we want the program to do...
 Installed linux tools (through apt)
 - nmap
 - net-tools
+- nload
