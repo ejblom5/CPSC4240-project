@@ -1,7 +1,7 @@
 # CPSC4240-project
 Ideas for what we want the program to do...
 - List devices on the network
-  - ifconfig # get the ip address/mask
+  - hostname -I | awk '{print $1}' # get the ip address
   - sudo nmap {ip}/{mask} | grep MAC # get the list of host names on the network
 - Network analysis
   - speed,bandwidth,total data usage, etc.
