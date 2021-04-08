@@ -9,10 +9,14 @@ def install_assets():
     os.system("sudo apt-get install nmap")
     os.system("sudo apt install inetutils-traceroute")
     os.system("sudo apt install ethtool")
+    os.system("sudo apt install ufw")
 
 def path_time_to_website():
     website = input("Please enter a valid website (ex. www.google.com) : \n")
     os.system("traceroute "+website)
+
+def list_all_interfaces():
+    os.system("ip link show")
 
 def shut_down_all_networking():
     print(">> Shutting down networking interface...")
@@ -21,6 +25,9 @@ def shut_down_all_networking():
 def start_up_all_networking():
     print(">> Starting up networking interface...")
     os.system("systemctl start NetworkManager")
+
+def start_up_firewall():
+    os.system("sudo ufw enable")
 
 def list_devices():
 	print(">> thinking...")
@@ -45,6 +52,8 @@ while(response != "quit" and response != "q"):
     print("4) Find the path time for a website.")
     print("5) Stop all networking.")
     print("6) Start all networking.")
+    print("7) List all networking interfaces.")
+    print("8) Start up firewall.")
     print("\nUse CTRL+C or type 'quit' to exit.")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
     response = input("Choose an option from the list above:\n")
@@ -69,6 +78,12 @@ while(response != "quit" and response != "q"):
 
     if response == "6":
         start_up_all_networking()
+
+    if response == "7":
+        list_all_interfaces()
+
+    if response == "8":
+        start_up_firewall()
 
     if response == "q" or response == "quit":
         print(">> exiting...")
